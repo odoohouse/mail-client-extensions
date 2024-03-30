@@ -1,4 +1,4 @@
-# Odoo for outlook
+# Odoo for Outlook - Subject
 
 ## General information about the plugin
 
@@ -56,7 +56,7 @@ case "linux":
 - Click the cog in the upper right corner of the pain window
 - Select "View all Outlook settings"
 - Click "Mail" > "Customize actions"
-- Under the section "Message surface", check "Odoo for Outlook".
+- Under the section "Message surface", check "Odoo for Outlook - Subject".
 
 ## Technical remarks
 

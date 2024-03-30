@@ -4,13 +4,13 @@
   <Version>2.0.1</Version>
   <ProviderName>Odoo</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Odoo for Outlook"/>
-  <Description DefaultValue="Odoo for Outlook."/>
-  <IconUrl DefaultValue="https://localhost:3000/assets/odoo-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/odoo-128.png"/>
+  <DisplayName DefaultValue="Odoo for Outlook - Subject"/>
+  <Description DefaultValue="Odoo for Outlook - Subject."/>
+  <IconUrl DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-128.png"/>
   <SupportUrl DefaultValue="https://www.odoo.com/help"/>
   <AppDomains>
-    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -23,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+        <SourceLocation DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -72,17 +72,17 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/odoo-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/odoo-32.png"/>
-        <bt:Image id="Icon.64x64" DefaultValue="https://localhost:3000/assets/odoo-64.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/odoo-80.png"/>
-        <bt:Image id="Icon.128x128" DefaultValue="https://localhost:3000/assets/odoo-128.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-32.png"/>
+        <bt:Image id="Icon.64x64" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-64.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-80.png"/>
+        <bt:Image id="Icon.128x128" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-128.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Odoo for Outlook"/>
+        <bt:String id="GroupLabel" DefaultValue="Odoo for Outlook - Subject"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Open contact profile"/>
       </bt:ShortStrings>
       <bt:LongStrings>
@@ -129,17 +129,17 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/odoo-16.png"/>
-          <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/odoo-32.png"/>
-          <bt:Image id="Icon.64x64" DefaultValue="https://localhost:3000/assets/odoo-64.png"/>
-          <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/odoo-80.png"/>
-          <bt:Image id="Icon.128x128" DefaultValue="https://localhost:3000/assets/odoo-128.png"/>
+          <bt:Image id="Icon.16x16" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-32.png"/>
+          <bt:Image id="Icon.64x64" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-64.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-80.png"/>
+          <bt:Image id="Icon.128x128" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/assets/odoo-128.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://odoohouse.s3.eu-central-1.amazonaws.com/plugins/v16/outlook/taskpane.html"/>
         </bt:Urls>
         <bt:ShortStrings>
-          <bt:String id="GroupLabel" DefaultValue="Odoo for Outlook"/>
+          <bt:String id="GroupLabel" DefaultValue="Odoo for Outlook - Subject"/>
           <bt:String id="TaskpaneButton.Label" DefaultValue="Open sender profile"/>
         </bt:ShortStrings>
         <bt:LongStrings>

@@ -1,7 +1,8 @@
 const devCerts = require("office-addin-dev-certs");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 
@@ -12,6 +13,9 @@ module.exports = async (env, options)  => {
     domain = env.DOMAIN;
   }
   const config = {
+    output: {
+      clean: true, // Clean the output directory before emit.
+    },
     devtool: "source-map",
     entry: {
       vendor: [
@@ -40,13 +44,13 @@ module.exports = async (env, options)  => {
         },
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader']
+          use: [MiniCssExtractPlugin.loader, 'css-loader']
         },
         {
           test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
           use: {
               loader: 'file-loader',
-              query: {
+              options: {
                   name: 'assets/[name].[ext]'
                 }
               }  
@@ -84,7 +88,10 @@ module.exports = async (env, options)  => {
       new webpack.DefinePlugin({
         __DOMAIN__: JSON.stringify(domain)
       }),
-      new ExtractTextPlugin('[name].[hash].css'),
+      new MiniCssExtractPlugin({
+        filename: dev ? "[name].css" : "[name].[contenthash].css",
+        chunkFilename: dev ? "[id].css" : "[id].[contenthash].css",
+      }),
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
           template: './src/taskpane/taskpane.html',

@@ -68,6 +68,11 @@ class Logger extends React.Component<LoggerProps, LoggerState> {
             )} <a href="https://www.odoo.com/documentation/master/applications/productivity/mail_plugins.html" target="_blank">${_t(
                 'Outlook Inbox',
             )}</a></div>`;
+            const subject = Office.context.mailbox.item.subject;
+            const cc = Office.context.mailbox.item.cc;
+            const to = Office.context.mailbox.item.to;
+            const from = Office.context.mailbox.item.from;
+            const message_datetime = Office.context.mailbox.item.dateTimeCreated;
             const body = result.value.split('<div id="x_appendonsend"></div>')[0]; // Remove the history and only log the most recent message.
             const message = msgHeader + body + msgFooter;
             const doc = new DOMParser().parseFromString(message, 'text/html');
@@ -79,6 +84,13 @@ class Logger extends React.Component<LoggerProps, LoggerState> {
                 model: this.props.model,
                 message: message,
                 attachments: [],
+                subject: subject,
+                message_datetime: message_datetime,
+                extras: {
+                    from: from,
+                    to: to,
+                    cc: cc
+                }
             };
 
             //check if attachment size is bigger then the threshold
